@@ -1,0 +1,15 @@
+{
+  "name": "local-test-marketplace",
+  "owner": {
+    "name": "local-user"
+  },
+  "version": 1,
+  "plugins": [
+    {
+      "name": "test-generation-plugin",
+      "version": "1.0.0",
+      "description": "Generates systematic tests for selected code.",
+      "source": "./test-generation-plugin"
+    }
+  ]
+}

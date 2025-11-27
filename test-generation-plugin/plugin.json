@@ -1,0 +1,35 @@
+{
+  "name": "test-generation-plugin",
+  "version": "1.0.0",
+  "description": "A plugin to be used with Claude Code that generates structured tests for selected code using a systematic workflow.",
+  "author": "Harry Cummins",
+  "repository": "",
+  "main": "index.js",
+  "engines": {
+    "claude-code": "^1.0.0"
+  },
+
+  "commands": [
+    {
+      "name": "generate-tests",
+      "description": "Generate structured unit tests for the selected code.",
+      "promptFile": "commands/generate-tests/prompt.md",
+      "includeSelection": true
+    }
+  ],
+
+  "skills": [
+    {
+      "name": "systematic-test-generation",
+      "description": "A structured workflow for analysing code and producing high-quality test scenarios and executable tests.",
+      "file": "skills/systematic-test-generation/skill.md"
+    }
+  ],
+
+  "hooks": [
+    {
+      "type": "onPromptSubmit",
+      "file": "hooks/on-prompt-submit.js"
+    }
+  ]
+}
